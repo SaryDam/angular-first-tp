@@ -10,6 +10,9 @@ export class CategoryComponent implements OnInit {
 
   categoryContent: any[] = this.categorieService.categoryContent;
   playerName: string = '';
+  searchTerm: string = '';
+  filteredCategories = [...this.categoryContent];
+
 
   constructor(
     private categorieService: CategorieService,
@@ -26,6 +29,14 @@ export class CategoryComponent implements OnInit {
       this.categorieService.playerName = params['playerName'];
       this.playerName = params['playerName'];
     });
+  }
+
+  filterCategories() {
+    const term = this.searchTerm.toLowerCase();
+    if(this.searchTerm != ''){
+    this.filteredCategories = this.categoryContent.filter(content =>
+      content.name.toLowerCase().includes(term)
+    )};
   }
 
   navigateToQuizz(categoryId: number){
