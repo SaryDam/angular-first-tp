@@ -1,0 +1,23 @@
+.container {
+    max-width: 1200px; /* Limite la largeur du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+  }
+  
+  .card {
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'effet d'agrandissement et l'ombre */
+    border: 1px solid #e0e0e0; /* Bordure légère pour la carte */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Agrandit la carte au survol */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Taille de la police pour le titre */
+    font-weight: bold; /* Met le titre en gras */
+  }
+  

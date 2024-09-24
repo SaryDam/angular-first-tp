@@ -1,0 +1,12 @@
+<div class="container mt-4">
+    <h2>Catégories</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let content of categoryContent">
+        <div class="card mb-4 shadow-sm" (click)="navigateToQuizz(content.id)">
+          <div class="card-body">
+            <h5 class="card-title">{{ content.name }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
